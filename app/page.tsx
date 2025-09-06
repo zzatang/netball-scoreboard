@@ -197,10 +197,10 @@ export default function NetballScoreboard() {
 
         {/* Timer */}
         <Card className="bg-slate-800 border-slate-700">
-          <CardContent className="pt-6">
+          <CardContent className="py-3">
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-4">{formatTime(timeLeft)}</div>
-              <div className="flex justify-center gap-2 mb-4">
+              <div className="text-4xl font-bold text-white mb-2">{formatTime(timeLeft)}</div>
+              <div className="flex justify-center gap-2 mb-2">
                 <Button
                   onClick={() => {
                     if (isRunning) {
@@ -245,8 +245,8 @@ export default function NetballScoreboard() {
         <div className="space-y-4">
           {/* Away Team */}
           <Card className="bg-rose-100 border-rose-200">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-center text-sm">
+            <CardHeader className="pb-1">
+              <CardTitle className="text-center text-lg font-semibold">
                 {editingAwayTeam ? (
                   <Input
                     value={awayTeam}
@@ -267,7 +267,7 @@ export default function NetballScoreboard() {
                 )}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="py-3">
               <div className="text-center">
                 {editingAway ? (
                   <Input
@@ -280,12 +280,12 @@ export default function NetballScoreboard() {
                     autoFocus
                   />
                 ) : (
-                  <div className="mb-3 flex items-center justify-center gap-3">
+                  <div className="mb-2 flex items-center justify-center gap-3">
                     <Button
                       onClick={() => setAwayScore((prev) => Math.max(0, prev - 1))}
                       size="sm"
                       variant="outline"
-                      className="border-slate-300 text-slate-700 hover:bg-slate-100 px-5 py-4 rounded-md"
+                      className="border-slate-300 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-md"
                       aria-label="Decrease away score"
                       title="Decrease"
                     >
@@ -304,7 +304,7 @@ export default function NetballScoreboard() {
                   <Button
                     onClick={() => setAwayScore((prev) => prev + 1)}
                     size="lg"
-                    className="bg-slate-800 hover:bg-slate-700 text-white py-8 rounded-lg w-1/2 max-w-[260px]"
+                    className="bg-slate-800 hover:bg-slate-700 text-white py-6 rounded-lg w-1/2 max-w-[260px]"
                     aria-label="Increase away score"
                     title="Increase"
                   >
@@ -317,8 +317,8 @@ export default function NetballScoreboard() {
 
           {/* Home Team */}
           <Card className="bg-white border-slate-200">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-center text-sm">
+            <CardHeader className="pb-1">
+              <CardTitle className="text-center text-lg font-semibold">
                 {editingHomeTeam ? (
                   <Input
                     value={homeTeam}
@@ -339,7 +339,7 @@ export default function NetballScoreboard() {
                 )}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="py-3">
               <div className="text-center">
                 {editingHome ? (
                   <Input
@@ -352,12 +352,12 @@ export default function NetballScoreboard() {
                     autoFocus
                   />
                 ) : (
-                  <div className="mb-3 flex items-center justify-center gap-3">
+                  <div className="mb-2 flex items-center justify-center gap-3">
                     <Button
                       onClick={() => setHomeScore((prev) => Math.max(0, prev - 1))}
                       size="sm"
                       variant="outline"
-                      className="border-slate-300 text-slate-700 hover:bg-slate-100 px-5 py-4 rounded-md"
+                      className="border-slate-300 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-md"
                       aria-label="Decrease home score"
                       title="Decrease"
                     >
@@ -376,7 +376,7 @@ export default function NetballScoreboard() {
                   <Button
                     onClick={() => setHomeScore((prev) => prev + 1)}
                     size="lg"
-                    className="bg-slate-800 hover:bg-slate-700 text-white py-8 rounded-lg w-1/2 max-w-[260px]"
+                    className="bg-slate-800 hover:bg-slate-700 text-white py-6 rounded-lg w-1/2 max-w-[260px]"
                     aria-label="Increase home score"
                     title="Increase"
                   >
