@@ -267,7 +267,7 @@ export default function NetballScoreboard() {
                 )}
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-1 pb-1">
+            <CardContent className="pt-0 pb-1">
               <div className="text-center">
                 {editingAway ? (
                   <Input
@@ -280,7 +280,7 @@ export default function NetballScoreboard() {
                     autoFocus
                   />
                 ) : (
-                  <div className="mb-0 flex items-center justify-center gap-3">
+                  <div className="-mt-1 mb-0 flex items-center justify-center gap-3">
                     <Button
                       onClick={() => setAwayScore((prev) => Math.max(0, prev - 1))}
                       size="sm"
@@ -339,7 +339,7 @@ export default function NetballScoreboard() {
                 )}
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-1 pb-1">
+            <CardContent className="pt-0 pb-1">
               <div className="text-center">
                 {editingHome ? (
                   <Input
@@ -352,7 +352,7 @@ export default function NetballScoreboard() {
                     autoFocus
                   />
                 ) : (
-                  <div className="mb-0 flex items-center justify-center gap-3">
+                  <div className="-mt-1 mb-0 flex items-center justify-center gap-3">
                     <Button
                       onClick={() => setHomeScore((prev) => Math.max(0, prev - 1))}
                       size="sm"
