@@ -165,6 +165,11 @@ export default function NetballScoreboard() {
     }
   }
 
+  const resetQuarter = () => {
+    setQuarter(1)
+    resetTimer()
+  }
+
   const handleScoreEdit = (team: "home" | "away", value: string) => {
     const score = Number.parseInt(value) || 0
     if (team === "home") {
@@ -181,6 +186,14 @@ export default function NetballScoreboard() {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-slate-800 mb-2">Netball Scoreboard</h1>
           <div className="flex items-center justify-center gap-4 mb-2">
+            <Button
+              onClick={resetQuarter}
+              variant="outline"
+              size="sm"
+              className="px-2 py-1 text-slate-700"
+            >
+              Reset Quarter
+            </Button>
             <div className="text-lg font-semibold text-slate-700">Quarter {quarter}</div>
             <Button
               onClick={() => setSoundEnabled(!soundEnabled)}
