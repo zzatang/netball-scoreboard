@@ -246,7 +246,7 @@ export default function NetballScoreboard() {
           {/* Away Team */}
           <Card className="bg-rose-100 border-rose-200">
             <CardHeader className="pb-0">
-              <CardTitle className="text-center text-lg font-semibold">
+              <CardTitle className="text-center text-2xl font-bold">
                 {editingAwayTeam ? (
                   <Input
                     value={awayTeam}
@@ -267,7 +267,7 @@ export default function NetballScoreboard() {
                 )}
               </CardTitle>
             </CardHeader>
-            <CardContent className="py-2">
+            <CardContent className="pt-1 pb-1">
               <div className="text-center">
                 {editingAway ? (
                   <Input
@@ -280,12 +280,12 @@ export default function NetballScoreboard() {
                     autoFocus
                   />
                 ) : (
-                  <div className="mb-1 flex items-center justify-center gap-3">
+                  <div className="mb-0 flex items-center justify-center gap-3">
                     <Button
                       onClick={() => setAwayScore((prev) => Math.max(0, prev - 1))}
                       size="sm"
                       variant="outline"
-                      className="border-red-300 text-red-600 hover:bg-red-50 px-5 py-2 rounded-md"
+                      className="border-red-300 text-red-600 hover:bg-red-50 px-4 py-1 rounded-md"
                       aria-label="Decrease away score"
                       title="Decrease"
                     >
@@ -304,7 +304,7 @@ export default function NetballScoreboard() {
                   <Button
                     onClick={() => setAwayScore((prev) => prev + 1)}
                     size="lg"
-                    className="bg-green-600 hover:bg-green-700 text-white py-5 rounded-lg w-3/4 max-w-[320px]"
+                    className="bg-green-600 hover:bg-green-700 text-white py-4 rounded-lg w-3/4 max-w-[320px]"
                     aria-label="Increase away score"
                     title="Increase"
                   >
@@ -318,7 +318,7 @@ export default function NetballScoreboard() {
           {/* Home Team */}
           <Card className="bg-white border-slate-200">
             <CardHeader className="pb-0">
-              <CardTitle className="text-center text-lg font-semibold">
+              <CardTitle className="text-center text-2xl font-bold">
                 {editingHomeTeam ? (
                   <Input
                     value={homeTeam}
@@ -339,7 +339,7 @@ export default function NetballScoreboard() {
                 )}
               </CardTitle>
             </CardHeader>
-            <CardContent className="py-2">
+            <CardContent className="pt-1 pb-1">
               <div className="text-center">
                 {editingHome ? (
                   <Input
@@ -352,12 +352,12 @@ export default function NetballScoreboard() {
                     autoFocus
                   />
                 ) : (
-                  <div className="mb-1 flex items-center justify-center gap-3">
+                  <div className="mb-0 flex items-center justify-center gap-3">
                     <Button
                       onClick={() => setHomeScore((prev) => Math.max(0, prev - 1))}
                       size="sm"
                       variant="outline"
-                      className="border-red-300 text-red-600 hover:bg-red-50 px-5 py-2 rounded-md"
+                      className="border-red-300 text-red-600 hover:bg-red-50 px-4 py-1 rounded-md"
                       aria-label="Decrease home score"
                       title="Decrease"
                     >
@@ -376,7 +376,7 @@ export default function NetballScoreboard() {
                   <Button
                     onClick={() => setHomeScore((prev) => prev + 1)}
                     size="lg"
-                    className="bg-green-600 hover:bg-green-700 text-white py-5 rounded-lg w-3/4 max-w-[320px]"
+                    className="bg-green-600 hover:bg-green-700 text-white py-4 rounded-lg w-3/4 max-w-[320px]"
                     aria-label="Increase home score"
                     title="Increase"
                   >
